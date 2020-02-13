@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EKV-u8-hNg">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jJa-B0-cxQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EKV-u8-hNg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jf2-Js-oHq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Uav-DG-0Se" kind="relationship" relationship="viewControllers" id="CeE-WT-heZ"/>
+                        <segue destination="AKM-kB-DKc" kind="relationship" relationship="viewControllers" id="BQi-Qo-TNs"/>
+                        <segue destination="XmE-5u-tKS" kind="relationship" relationship="viewControllers" id="OwV-7m-X6x"/>
+                        <segue destination="JoQ-BY-VnU" kind="relationship" relationship="viewControllers" id="Hte-47-WPX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XkH-vI-Lms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Mensagens-->
+        <scene sceneID="NUz-ec-AYN">
+            <objects>
+                <viewController id="JoQ-BY-VnU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="44o-X2-TDz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="l0Y-2X-o0T"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mensagens" image="message" id="ib9-xm-wru"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDH-g4-tko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="988"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="eJ0-d1-9qf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Schedule" id="AKM-kB-DKc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Agenda" image="calendar" id="CV2-ch-UOr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aR7-fP-Cwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="275"/>
+        </scene>
+        <!--EditItem-->
+        <scene sceneID="5Hg-RS-v5W">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="EditItem" storyboardName="Schedule" referencedIdentifier="EditItem" id="wG5-Iv-6cU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TT3-s8-16d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2040" y="1238.75"/>
+        </scene>
+        <!--Pets-->
+        <scene sceneID="Vdc-Ls-92g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Pets" id="Uav-DG-0Se" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meus Pets" image="pet" id="KOV-hu-g4I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRE-Kf-DCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="-220"/>
+        </scene>
+        <!--Find-->
+        <scene sceneID="ArJ-Qx-sYJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Find" id="XmE-5u-tKS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="sx1-e3-Jgk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adH-d7-h0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" width="24" height="24"/>
+        <image name="message" width="24" height="24"/>
+        <image name="pet" width="24" height="24"/>
+    </resources>
+</document>

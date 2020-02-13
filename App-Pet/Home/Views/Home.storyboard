@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EKV-u8-hNg">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jJa-B0-cxQ">
+            <objects>
+                <tabBarController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="EKV-u8-hNg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jf2-Js-oHq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Uav-DG-0Se" kind="relationship" relationship="viewControllers" id="CeE-WT-heZ"/>
+                        <segue destination="AKM-kB-DKc" kind="relationship" relationship="viewControllers" id="BQi-Qo-TNs"/>
+                        <segue destination="XmE-5u-tKS" kind="relationship" relationship="viewControllers" id="OwV-7m-X6x"/>
+                        <segue destination="YgY-xy-5RN" kind="relationship" relationship="viewControllers" id="jJu-C2-VH0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XkH-vI-Lms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="eJ0-d1-9qf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Schedule" id="AKM-kB-DKc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Agenda" image="calendar" id="CV2-ch-UOr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aR7-fP-Cwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="795"/>
+        </scene>
+        <!--Pets-->
+        <scene sceneID="Vdc-Ls-92g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Pets" id="Uav-DG-0Se" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meus Pets" image="pet" id="KOV-hu-g4I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRE-Kf-DCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="795"/>
+        </scene>
+        <!--Find-->
+        <scene sceneID="ArJ-Qx-sYJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Find" id="XmE-5u-tKS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Encontrar" image="find" id="sx1-e3-Jgk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adH-d7-h0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="795"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="lpX-qF-SJU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="YgY-xy-5RN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cH7-cd-fR0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUE-JY-Q3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="795"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" width="24" height="24"/>
+        <image name="find" width="24" height="24"/>
+        <image name="pet" width="24" height="24"/>
+    </resources>
+</document>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "EditPetViewController.changeAction(sender:):EditPetViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tf">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MessagesViewController.tableView(_:numberOfRowsInSection:):MessagesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "messages">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EditScheduleViewController.tableView(_:didSelectRowAt:):EditScheduleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedPets">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SelectPetTableViewController.tableView(_:didSelectRowAt:):SelectPetTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedPets">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EditScheduleViewController.saveAction(_:):EditScheduleViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in EditScheduleViewController.tableView(_:didSelectRowAt:):EditScheduleViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "EditPetViewController.save(_:):EditPetViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "smallImage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
