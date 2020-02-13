@@ -12,34 +12,37 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
 
+protocol FirebaseUserDelegate: NSObjectProtocol {
+    func didSuccessOnLogin()
+    func didErrorOnLogin(error: Error)
+    func didErrorOnCheckEmail(error: Error)
+    func didSuccessOnCreateUser()
+    func didErrorOnCreateUser(error: Error)
+    func didSuccessOnChangeName()
+    func didErrorOnChangeName(error: Error)
+}
+
 class Firebase {
     
     static var shared = Firebase()
+    weak var delegate: FirebaseUserDelegate?
     
     //MARK: Auth vars
     var auth = Auth.auth()
     var user: User?
-    //Mark: Firestore vars
-    //var db = Firestore.firestore()
-    //var usersRef: CollectionReference?
     
     //MARK: Storage vars
     let ref = Storage.storage().reference()
     
-    //let mountainsRef = ref.child("mountains.jpg")
-    
-    //let mountainImagesRef = ref.child("images/mountains.jpg")
-    
     //MARK: Auth methods
-    func login(email: String, password: String, completion: @escaping (Error?) -> Void) {
-        auth.signIn(withEmail: email, password: password) { [weak self] result, error in
+    func login(email: String, password: String) {
+        auth.signIn(withEmail: email, password: password) {result, error in
             if let error = error {
-                print("Error while logging\n\(error.localizedDescription)")
-                completion(error)
+                self.delegate?.didErrorOnLogin(error: error)
             }
             if let user = result?.user {
-                self?.user = user
-                completion(nil)
+                self.user = user
+                self.delegate?.didSuccessOnLogin()
             }
         }
     }
@@ -47,7 +50,8 @@ class Firebase {
     func checkEmailIsUsed(email: String, isUsed: @escaping (Bool?) -> Void) {
         auth.fetchSignInMethods(forEmail: email) { (providers, error) in
             if let error = error {
-                print("Error fetching: \(error.localizedDescription)")
+                self.delegate?.didErrorOnCheckEmail(error: error)
+            } else {
                 isUsed(false)
             }
             if let providers = providers {
@@ -58,29 +62,28 @@ class Firebase {
         }
     }
     
-    func createUser(email: String, password: String, completion: @escaping (Error?) -> Void) {
+    func createUser(email: String, password: String) {
         auth.createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
-                print("Erro ao criar usuário: \(error.localizedDescription)")
-                completion(error)
+                self.delegate?.didErrorOnCreateUser(error: error)
                 return
             }
             if let user = result?.user {
                 self.user = user
+                self.delegate?.didSuccessOnCreateUser()
             }
-            completion(nil)
         }
     }
     
-    func changeNameRequest(user : User, name: String, completion: @escaping (Error?) -> Void) {
+    func changeNameRequest(user : User, name: String) {
         let changeRequest = user.createProfileChangeRequest()
         changeRequest.displayName = name
         changeRequest.commitChanges(completion: { (error) in
             if let error = error {
-                completion(error)
+                self.delegate?.didErrorOnChangeName(error: error)
                 return
             }
-            completion(nil)
+            self.delegate?.didSuccessOnChangeName()
         })
     }
     

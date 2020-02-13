@@ -485,6 +485,13 @@
 			path = RoundedButton;
 			sourceTree = "<group>";
 		};
+		1BFA8FA823F597BD00E89681 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		B512CE5BCD7BD15161C7FBFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +553,8 @@
 		E609B0CD2310034F008F7F81 /* App-Pet */ = {
 			isa = PBXGroup;
 			children = (
+				1BFA8FA823F597BD00E89681 /* Firebase */,
+				E663097C236B1E2D000C3454 /* Firebase.swift */,
 				1BFA8F8C23F5921600E89681 /* StartUp */,
 				E638EA4E23510E7F00AD2FF1 /* Models */,
 				E638EA4F23510EB100AD2FF1 /* Onboarding */,
@@ -683,7 +692,6 @@
 				E628A895235A4F59008AF422 /* Notifications.swift */,
 				E66309722369F0D2000C3454 /* PetUser.swift */,
 				E6630976236A0E0A000C3454 /* DatabaseRepresentation.swift */,
-				E663097C236B1E2D000C3454 /* Firebase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
